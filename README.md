@@ -2,21 +2,28 @@ p5pp_ext
 ========
 
 A demo from php5 power programming chapter 15
+-------
 
-./ext_skel --extname=myfile --proto=myfile.def
+* ./ext_skel --extname=myfile --proto=myfile.def
+
 1.  $ cd ..
 2.  $ vi ext/myfile/config.m4
-uncomment: 
+
+* Uncomment: 
+
 PHP_ARG_ENABLE(myfile, whether to enable myfile support,
-        [  --enable-myfile                 Include myfile support])
+[  --enable-myfile                 Include myfile support])
 
-    3.  $ ./buildconf
-    4.  $ ./configure --[with|enable]-myfile
-    5.  $ make
-    6.  $ ./php -f ext/myfile/myfile.php
 
-    7.  $ vi ext/myfile/myfile.c
-    8.  $ make
+3.  $ ./buildconf
+4.  $ ./configure --[with|enable]-myfile
+5.  $ make
+6.  $ ./php -f ext/myfile/myfile.php
+
+7.  $ vi ext/myfile/myfile.c
+8.  $ make
+
+* Others
 
     Repeat steps 3-6 until you are satisfied with ext/myfile/config.m4 and
     step 6 confirms that your module is compiled into PHP. Then, start writing
